@@ -8,3 +8,17 @@
 
 #### About the file structure
 
+.
+©À©¤©¤ include                     // head file folder
+©¦    ©À©¤©¤ student.h
+|    ©À©¤©¤ course.h
+|    ©¸©¤©¤ cselect.h
+©À©¤©¤ lib                         // lib folder
+|    ©À©¤©¤
+|    ©À©¤©¤
+|    ©¸©¤©¤
+©À©¤©¤ src                         // code folder
+|    ©À©¤©¤
+|    ©À©¤©¤
+|    ©¸©¤©¤
+©¸©¤©¤ main.c                      // launch file (main)
