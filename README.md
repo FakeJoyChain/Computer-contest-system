@@ -7,18 +7,20 @@
 ---
 
 #### About the file structure
-
 .
-©À©¤©¤ include                     // head file folder
-©¦    ©À©¤©¤ student.h
-|    ©À©¤©¤ course.h
-|    ©¸©¤©¤ cselect.h
-©À©¤©¤ lib                         // lib folder
-|    ©À©¤©¤
-|    ©À©¤©¤
-|    ©¸©¤©¤
-©À©¤©¤ src                         // code folder
-|    ©À©¤©¤
-|    ©À©¤©¤
-|    ©¸©¤©¤
-©¸©¤©¤ main.c                      // launch file (main)
+â”œâ”€â”€â”€ include                     // head file folder
+â”‚     â”œâ”€â”€ student.h
+|     â”œâ”€â”€ course.h
+|     â””â”€â”€ cselect.h
+â”œâ”€â”€â”€ lib                         // lib folder
+â”‚     â”œâ”€â”€
+|     â”œâ”€â”€
+|     â””â”€â”€
+â”œâ”€â”€â”€ src                         // code folder
+â”‚     â”œâ”€â”€ course.c
+|     â”œâ”€â”€ cselect.c
+|     â””â”€â”€ student.c
+â”œâ”€â”€â”€ main.c                      // launch file (main)
+â”œâ”€â”€â”€ makefile                    // project file
+â”œâ”€â”€â”€ module_test.c               // module test file (abandoned)
+â””â”€â”€â”€ README.md                   // this file
