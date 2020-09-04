@@ -60,5 +60,4 @@ extern bool removeCourse();
 
 extern bool resetCourse();
 
-#include "course.c"
 #endif

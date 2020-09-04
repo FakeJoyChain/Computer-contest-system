@@ -34,5 +34,4 @@ extern void showCSelect(cselectptr ref_csobj);
 extern void show_menu_for_admin();
 extern void show_menu_for_ouser();
 double add(void* array, int len);
-#include "cselect.c"
 #endif

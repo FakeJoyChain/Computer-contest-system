@@ -49,5 +49,4 @@ extern bool resetStudent();
 
 double sum(void* val_array, int len, double (*add)(void*, int));
 
-#include "student.c"
 #endif
