@@ -16,7 +16,6 @@ struct sim_comp get_competitor() {
  * @param out_comps_array 为struct sim_comp*类型变量的地址, 用于改变指针指向,
  * 获取所有对象集合, 若没有对象或是发生错误则将会将此变量置NULL
  * @return 获取成功则返回获取到的对象集合的个数, 失败或没有对象时则返回0
- * @see aa
  */
 int read_competitors(struct sim_comp** out_comps_array) {
     int cnt = 0;
@@ -45,6 +44,7 @@ int read_competitors(struct sim_comp** out_comps_array) {
             if (cptr == NULL) {
                 printf("%s\n", "对象内存分配失败!");
                 cnt = 0;
+                fclose(file);
                 *out_comps_array = NULL;
                 return cnt;
             }
@@ -52,16 +52,20 @@ int read_competitors(struct sim_comp** out_comps_array) {
             if (fread(cptr, sizeof(competitors), cnt, file) != cnt) {
                 printf("%s\n", "对象读取失败!");
                 cnt = 0;
-                *out_comps_array = NULL;
 
                 /** 防止内存泄露 */
                 free(cptr);
                 fclose(file);
-
+                cptr = NULL;
+                *out_comps_array = NULL;
                 return cnt;
             }
+            /** 修改指针指向 */
+            *out_comps_array = cptr;
+        } else {
+            printf("%s\n", "无对象数据!");
         }
+        fclose(file);
     }
-
     return cnt;
 }
