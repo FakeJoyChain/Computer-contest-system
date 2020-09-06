@@ -16,6 +16,8 @@ struct sim_comp get_competitor() {
  * @param out_comps_array 为struct sim_comp*类型变量的地址, 用于改变指针指向,
  * 获取所有对象集合, 若没有对象或是发生错误则将会将此变量置NULL
  * @return 获取成功则返回获取到的对象集合的个数, 失败或没有对象时则返回0
+ * @author fakejoychain
+ * @date 2020年9月6日
  */
 int read_competitors(struct sim_comp** out_comps_array) {
     int cnt = 0;
@@ -69,3 +71,4 @@ int read_competitors(struct sim_comp** out_comps_array) {
     }
     return cnt;
 }
+
